@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
+            Lion lion = new Cat();
 
+            lion.SetSize("big");
+
+            lion.GetSize();
         }
     }
 }
