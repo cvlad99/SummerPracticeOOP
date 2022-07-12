@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace SingleResponsabilityPrinciple.Violation
 {
@@ -8,11 +7,11 @@ namespace SingleResponsabilityPrinciple.Violation
         public void Register(string email, string password)
         {
             if (!ValidateEmail(email))
-                throw new ValidationException("Email is not an email");
+                Console.WriteLine("Email is not an email");
 
             var user = new User(email, password);
 
-
+            AddUser(user);
 
             SendEmail("random@email.com", "Hello world");
         }
@@ -24,12 +23,12 @@ namespace SingleResponsabilityPrinciple.Violation
 
         public void AddUser(User user)
         {
-            Console.WriteLine($"Adding {user}");
+            Console.WriteLine($"Adding user: {user.email}");
         }
 
         public void SendEmail(string email, string message)
         {
-            Console.WriteLine("Sending email");
+            Console.WriteLine("Sending email for registration");
         }
     }
 }

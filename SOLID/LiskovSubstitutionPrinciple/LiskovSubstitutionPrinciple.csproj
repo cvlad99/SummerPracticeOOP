@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <Folder Include="Fix\" />
-    <Folder Include="Violation\" />
   </ItemGroup>
 
 </Project>
