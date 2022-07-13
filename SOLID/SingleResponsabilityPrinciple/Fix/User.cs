@@ -1,4 +1,4 @@
-﻿namespace SingleResponsabilityPrinciple.Violation
+﻿namespace SingleResponsabilityPrinciple.Fix
 {
     public class User
     {
