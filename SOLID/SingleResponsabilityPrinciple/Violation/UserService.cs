@@ -7,13 +7,16 @@ namespace SingleResponsabilityPrinciple.Violation
         public void Register(string email, string password)
         {
             if (!ValidateEmail(email))
+            {
                 Console.WriteLine("Email is not an email");
+                return;
+            }
 
             var user = new User(email, password);
 
             AddUser(user);
 
-            SendEmail("random@email.com", "Hello world");
+            SendEmail(user.Email, "Hello world");
         }
 
         public bool ValidateEmail(string email)
@@ -23,12 +26,12 @@ namespace SingleResponsabilityPrinciple.Violation
 
         public void AddUser(User user)
         {
-            Console.WriteLine($"Adding user: {user.email}");
+            Console.WriteLine($"Adding User: {user.Email}");
         }
 
         public void SendEmail(string email, string message)
         {
-            Console.WriteLine("Sending email for registration");
+            Console.WriteLine($"Sending email to {email} for registration");
         }
     }
 }
