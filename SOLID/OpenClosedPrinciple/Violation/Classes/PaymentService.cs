@@ -6,6 +6,7 @@ namespace OpenClosedPrinciple.Violation.Classes
     {
         public void ProcessPayment(object payment)
         {
+            Console.WriteLine("Processing payment.");
             if (payment is CashPayment)
             {
                 CashPayment cashPayment = (CashPayment)payment;

@@ -11,6 +11,10 @@ namespace OpenClosedPrinciple.Fix
             IPayment payment = new CashPayment();
             
             paymentService.ProcessPayment(payment);
+
+            //Not working
+            // object invalidPayment = new object();
+            // paymentService.ProcessPayment(invalidPayment);
         }
     }
 }
