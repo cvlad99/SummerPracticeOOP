@@ -9,7 +9,7 @@ namespace LiskovSubstitutionPrinciple.Violation
             Size = "small";
         }
 
-        public virtual void GetSize()
+        public override void GetSize()
         {
             Console.WriteLine(Size);
         }
