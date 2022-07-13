@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace LiskovSubstitutionPrinciple.Violation
+namespace LiskovSubstitutionPrinciple.Fix
 {
-    public class Cat : Lion
+    public class Cat : Feline
     {
         public override void SetSize(string size)
         {

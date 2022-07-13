@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace LiskovSubstitutionPrinciple.Violation
+namespace LiskovSubstitutionPrinciple.Fix
 {
-    public class Cat : Lion
+    public class Lion: Feline
     {
         public override void SetSize(string size)
         {
-            Size = "small";
+            Size = size;
         }
 
         public override void GetSize()

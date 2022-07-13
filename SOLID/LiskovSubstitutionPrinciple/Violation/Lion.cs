@@ -2,7 +2,7 @@
 
 namespace LiskovSubstitutionPrinciple.Violation
 {
-    public class Lion
+    public abstract class Lion
     {
         public string Size { get; set; }
 
